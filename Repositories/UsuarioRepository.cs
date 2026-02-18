@@ -1,8 +1,8 @@
-﻿using VH_Burguer.Contexts;
-using VH_Burguer.Domains;
-using VH_Burguer.Interfaces;
+﻿using VHBurguer.Contexts;
+using VHBurguer.Domains;
+using VHBurguer.Interfaces;
 
-namespace VH_Burguer.Repositories
+namespace VHBurguer.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
@@ -20,19 +20,20 @@ namespace VH_Burguer.Repositories
 
         public Usuario? ObterPorId(int id)
         {
-            // Find performa melhor com chave primária
-            return _context.Usuario.Find(id);
+            // find performa melhor com chave primária
+            return _context.Usuario.Find(id); 
         }
 
         public Usuario? ObterPorEmail(string email)
         {
-            // FirstOrDefault => retorna nosso usuário do banco
+            // FirstOrDefault -> retorna nosso usuário do banco
             return _context.Usuario.FirstOrDefault(usuario => usuario.Email == email);
         }
 
         public bool EmailExiste(string email)
         {
-            // Any => retorna true ou false para validar se existe ALGUM usuário com esse email
+            // Any -> retorna um true ou false para validar se 
+            // existe ALGUM usuário com esse e-mail
             return _context.Usuario.Any(usuario => usuario.Email == email);
         }
 
@@ -44,9 +45,10 @@ namespace VH_Burguer.Repositories
 
         public void Atualizar(Usuario usuario)
         {
-            Usuario? usuarioBanco = _context.Usuario.FirstOrDefault(usuarioAux => usuarioAux.UsuarioID == usuario.UsuarioID);
+            Usuario? usuarioBanco = 
+                _context.Usuario.FirstOrDefault(usuarioAux => usuarioAux.UsuarioID == usuario.UsuarioID);
 
-            if (usuarioBanco == null)
+            if(usuarioBanco == null)
             {
                 return;
             }
@@ -60,7 +62,9 @@ namespace VH_Burguer.Repositories
 
         public void Remover(int id)
         {
-            Usuario? usuario = _context.Usuario.FirstOrDefault(usuarioAux => usuarioAux.UsuarioID == id);
+            Usuario? usuario =
+                _context.Usuario.FirstOrDefault(usuarioAux => usuarioAux.UsuarioID == id);
+
             if(usuario == null)
             {
                 return;
@@ -68,6 +72,7 @@ namespace VH_Burguer.Repositories
 
             _context.Usuario.Remove(usuario);
             _context.SaveChanges();
-        }   
+        }
+
     }
 }

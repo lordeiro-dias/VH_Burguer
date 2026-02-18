@@ -1,4 +1,4 @@
-﻿namespace VH_Burguer.Exceptions
+﻿namespace VHBurguer.Exceptions
 {
     public class DomainException : Exception
     {

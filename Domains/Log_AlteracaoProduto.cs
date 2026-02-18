@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VH_Burguer.Domains;
+namespace VHBurguer.Domains;
 
 public partial class Log_AlteracaoProduto
 {
