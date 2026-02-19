@@ -1,10 +1,8 @@
-﻿namespace VH_Burguer.DTOs
+﻿namespace VH_Burguer.DTOs.AutenticacaoDto
 {
-    public class CriarUsuarioDto
+    public class LoginDto
     {
-        public string Nome { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string Senha { get; set; } = null!;
-
     }
 }
