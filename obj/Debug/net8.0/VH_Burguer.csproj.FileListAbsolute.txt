@@ -143,3 +143,4 @@ C:\Users\53278369831\Desktop\Projetos VS\VH_Burguer\bin\Debug\net8.0\runtimes\wi
 C:\Users\53278369831\Desktop\Projetos VS\VH_Burguer\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\53278369831\Desktop\Projetos VS\VH_Burguer\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\53278369831\Desktop\Projetos VS\VH_Burguer\obj\Debug\net8.0\VH_Burguer.sourcelink.json
+C:\Users\53278369831\Desktop\Projetos VS\VH_Burguer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
