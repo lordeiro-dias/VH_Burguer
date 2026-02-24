@@ -4,6 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using VH_Burguer.Applications.Autenticacao;
 using VH_Burguer.Applications.Services;
+using VH_Burguer.Interfaces;
+using VH_Burguer.Repositories;
 using VHBurguer.Applications.Services;
 using VHBurguer.Contexts;
 using VHBurguer.Interfaces;
@@ -28,6 +30,10 @@ builder.Services.AddScoped<UsuarioService>();
 // Produto
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ProdutoService>();
+
+// Categoria
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<CategoriaService>();
 
 // JWT
 builder.Services.AddScoped<GeradorTokenJWT>();

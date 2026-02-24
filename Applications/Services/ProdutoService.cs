@@ -158,7 +158,7 @@ namespace VH_Burguer.Applications.Services
 
             Produto produto = _repository.ObterPorId(id);
 
-            if(produto != null)
+            if(produto == null)
             {
                 throw new DomainException("Produto não encontrado.");
             }
